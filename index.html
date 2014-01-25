@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="obterlocalizacao.js"></script>
+  </head>
+  <body onload="initialize()">
+  <div id="geo" style="display:none">
+  	<script type="text/JavaScript" src="geo.js"></script></div>
+    <div>
+    <select id="end" >
+        <option value="-23.561518, -46.656009">MASP - São Paulo</option>
+        <option value="-23.538639, -46.639056">Rua: Santa Efigênia, Centro - São Paulo</option>
+        <option value="-23.587138, -46.657867">Parque Ibirapuera - São Paulo</option>
+    </select>
+    <select id="mode" onchange="updateMode()">
+            <option value="transportepublico">Transporte Público</option>
+            <option value="carro">Carro</option>
+            <option value="andando">A Pé</option>
+        </select>
+    <input type="button" value="Como Chegar" onclick="updateMode()" />
+    <input type="button" value="Resetar" onclick="reset()" />
+    </div>
+    <div id="directionsPanel" style="width:300px;  position:absolute; margin-left:550px; top:30px;">Direções</div>
+    <div id="map_canvas" style="width:500px;  height:500px; top:30px;"></div>
+<br><br><br><br><br>
+By: <a href="http://mwm.net.br" target="_blank">M Web Master</a>
+  </body>
+</html>
